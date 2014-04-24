@@ -1,0 +1,228 @@
+body{
+	font-family: Verdana, Arial;
+	color: #555;
+	text-align: center;
+}
+
+button{
+	cursor: pointer;
+}
+
+fieldset{
+	background-color: #F6F6F6;
+	border-radius: .2em;
+	border: 1px solid #E7E7E7;
+	padding: 2px;
+}
+
+h1, legend{
+	color: #345E87;
+}
+
+button{
+	border: 1px solid transparent;
+	background-color: #345E87;
+	color: #f3f3f3;
+	border-radius: .2em;
+}
+
+footer{
+	margin: 0.5em;
+	font-size: 0.7em;
+}
+
+.linear-horizontal > *{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.linear-vertical > *{
+	display: block;
+}
+
+.inline-block{
+	display: inline-block;
+}
+
+.thinking{
+	visibility: hidden;
+}
+
+.invalid-move-message{
+	font-size: .8em;
+	color: #e99000;
+	text-shadow: 0px 0px 1px rgb(207, 202, 202);
+	font-style: italic;
+	visibility: hidden;
+}
+
+#main-container{
+	display: inline-block;
+	vertical-align: top;
+	padding: 1em;
+	padding-top: 0.2em;
+	border: 1px solid #DDD;
+	background-color: #F5F5F5;
+	border-radius: .3em;
+	position: relative;
+}
+
+#board{
+	display: inline-block;
+}
+
+#players{
+	display: inline-block;
+}
+
+#buttons{
+	display: inline-block;
+}
+
+#bt-restart{
+	background-color: #308e49;
+}
+
+#buttons{
+	position: absolute;
+	z-index: 1;
+	top: 4px;
+	right: 4px;
+}
+
+#options{
+	display: inline-block;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	padding: .2em;
+	border: 1px solid #8eb1d3;
+	border-radius: .2em;
+	background-color: #deeeff;
+	color: #345E87;
+	z-index: 1;
+}
+
+#options > div:first-child{
+	cursor: pointer;
+	text-align: left;
+}
+
+#options > ul{
+	display: none;
+	list-style: none;
+	padding: 0;
+	margin: .2em;
+}
+
+#info-container fieldset[data-turn]{
+	background-color: #B4D8FE;
+	border: 2px solid #486C92;
+}
+
+#info-container fieldset[data-turn][data-type="computer"] .thinking{
+	visibility: visible;
+}
+
+@media not screen and (max-width:360px){
+	button{
+		font-size: 1.4em;
+	}
+	
+	.invalid-move-message{
+		display: block;
+	}
+	
+	#board{
+		vertical-align: middle;
+	}
+	#info-container{
+		height: 34em;
+		width: 10em;
+		vertical-align: middle;
+		position: relative;
+	}
+	
+	#players{
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		height: auto;
+		width: auto;
+	}
+	
+	#players fieldset[data-color="black"]{
+		position: absolute;
+		top: 0;
+	}
+	
+	#players fieldset[data-color="white"]{
+		position: absolute;
+		bottom: 0;
+	}
+	
+	#info-container fieldset{
+		width: 100%;
+	}
+	
+}
+
+@media screen and (max-width:360px){	
+	h1{
+		position: absolute;
+		top: 4px;
+		left: 4px;
+		padding: 2px;
+		margin: 0;
+	}
+	
+	body, html{
+		padding: 0;
+		margin: 0;
+		height: 100%;
+		position: absolute;
+		width: 100%;
+	}
+	
+	#main-container{
+		height: 100%;
+		width: 100%;
+		border: 0 none;
+		position: relative;
+		margin: 0;
+		padding: 0;
+	}
+	
+	#body{
+		position: absolute;
+		top: 3.4em;
+		left: 0;
+	}
+	
+	#info-container fieldset{
+		padding: 6px;
+	}
+	
+	#buttons{
+		display: block;
+	}
+	
+	#bt-restart{
+		padding: 1em;
+		margin: 2px;
+	}
+	
+	#players{
+		display: block;
+	}
+	
+	#players > fieldset{
+		display: inline-block;
+	}
+	
+	#options{
+		position: static;
+	}
+}

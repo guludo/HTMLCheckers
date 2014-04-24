@@ -1,0 +1,100 @@
+#board{
+	border-radius: .2em;
+	overflow: hidden;
+	border: 2px solid #555;
+}
+
+.Checkers-Box{
+	width: 4em;
+	height: 4em;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+}
+
+.Checkers-Box[data-color=black]{
+	background-color: #333;
+}
+
+.Checkers-Box[data-color=white]{
+	background-color: #EEE;
+}
+
+.Checkers-Box[data-selected=white]{
+	background-color: #35608a;
+}
+
+.Checkers-Box[data-selected=black]{
+	background-color: #BED8F3;
+}
+
+.Checkers-Man{
+	position: absolute;
+	margin: .5em;
+	border-radius: 3.5em;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: auto;
+	width: auto;
+}
+
+.Checkers-Man[data-color=white]{
+	background-color: #c6e2ff;
+}
+
+.Checkers-Man[data-color=black]{
+	background-color: #5186bb;
+}
+
+.Checkers-KingTag{
+	position: absolute;
+	margin: 1em;
+	border-radius: 3.5em;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: auto;
+	width: auto;
+	display: none;
+}
+
+.Checkers-Man[data-king] .Checkers-KingTag{
+	display: block;
+}
+
+.Checkers-Man[data-color=white] > .Checkers-KingTag{
+	background-color: #5186bb;
+}
+
+.Checkers-Man[data-color=black] > .Checkers-KingTag{
+	background-color: #c6e2ff;
+}
+
+.Checkers-Row{
+	white-space: nowrap;
+}
+	
+@media screen and (max-width: 320px){	
+	.Checkers-Box{
+		width: 34px;
+		height: 34px;
+	}
+	.Checkers-KingTag{
+		border-radius: 2px;
+		margin: 7px;
+	}
+}
+
+@media screen and (min-width: 321px) and (max-width: 360px){
+	.Checkers-Box{
+		width: 40px;
+		height: 40px;
+	}
+	.Checkers-KingTag{
+		border-radius: 6px;
+		margin: 8px;
+	}
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Checkers</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="style.css" />
+		<link type="text/css" rel="stylesheet" href="board.css" />
+		<script src="jquery/jquery.min.js"></script>
+		<script src="state.js"></script>
+		<script src="board.js"></script>
+		<script src="javascript.js"></script>
+	</head>
+	<body>
+		<div id="main-container">
+			<div id="buttons">
+				<button id="bt-restart">Restart</button>
+			</div>
+			<h1>Checkers</h1>
+			<div id="body" class="linear-horizontal">
+				<div>
+					<div class="invalid-move-message" data-color="black">You have to make the capture!</div>
+					<div id="board" data-dimension="8"></div>
+					<div class="invalid-move-message" data-color="white">You have to make the capture!</div>
+				</div>
+				<div id="info-container" class="linear-vertical">
+					<div id="players">
+						<fieldset data-color="black" data-type="computer"><legend>Player Black</legend>
+							Type: <select data-name="type"><option value="human">Human</option><option value="computer" selected>Computer</option></select><br/>
+							Level: <select data-name="level"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+							<div class="thinking">I'm thinking...</div>
+						</fieldset>
+						<fieldset data-color="white" data-turn><legend>Player White</legend>
+							Type: <select data-name="type"><option value="human" selected>Human</option><option value="computer">Computer</option></select><br/>
+							Level: <select data-name="level"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+							<div class="thinking">I'm thinking...</div>
+						</fieldset>
+					</div>
+				</div>
+			</div>
+			<div id="options">
+				<div>Options</div>
+				<ul>
+					<li>
+						<input type="checkbox" data-option data-name="canCaptureBackwards" checked/> Man can capture backwards
+					</li>
+					<li>
+						<input type="checkbox" data-option data-name="kingCanCaptureBackwards" checked/> King can capture backwards
+					</li>
+				</ul>
+			</div>
+		</div>
+		<footer>By Gustavo Sousa &lt;<a href="mailto:gu_ludo@yahoo.com.br">gu_ludo@yahoo.com.br</a>&gt;</footer>
+	</body>
+</html>
